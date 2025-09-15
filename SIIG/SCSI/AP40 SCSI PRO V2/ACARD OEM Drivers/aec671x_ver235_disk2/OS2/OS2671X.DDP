@@ -1,0 +1,10 @@
+:TITLE
+Device driver profile for the AEC-671X OS/2 3.X & 4.X ADD
+
+:CONFIG
+BASEDEV=OS2671X.ADD
+
+:FILES
+OS2671X.ADD \OS2\BOOT\OS2671X.ADD
+
+

@@ -1,0 +1,53 @@
+
+  ACARD PCI Master Ultra SCSI Windows driver README File       Revision 1.00
+
+
+* Microsoft Windows version 3.1 disk driver for AEC-6710U
+
+
+     ACARD AEC-6710U Windows Driver support  32-bit disk access under Window
+     environment, The driver support real 32 bits disk data transfer between 
+     host and the SCSI adapter bus.Support upto 7 hard disk,Can coexist with
+     Wdctrl.386.  Please use install program(inswini.exe) to install windows
+     driver.
+
+* windows driver list
+     winaspi.dll  : windows 3.1x winaspi driver.
+     topint13.386 : windows 3.1x 32 bit fast disk driver.
+     atp870u.386  : windows 3.1x 32 bit fast disk driver.
+
+
+* If you want to manual install,Please reference follows :
+
+
+     Install procedure(manual) as follows:
+
+
+     1. Copy the drivers ATP870U.386 and TopInt13.386 to your system.
+
+        It is recommended that the drivers TopInt13.386 be copied 
+        to the Windows SYSTEM directory.(c:\Windows\system)
+
+     2. Edit the SYSTEM.ini file found in your Windows directory.
+        Check if the following line exist in the [386Enh] section of
+        your SYSTEM.ini file:
+
+        [386Enh]
+        32BitDiskAccess=ON
+
+        If the statement does not exist, add it into the [386Enh] section.
+        If the statement exists, but 32BitDiskAccess is set to "OFF", you
+        need to change it to "ON".
+
+     3. Add the following command lines in the [386Enh] section of the
+        SYSTEM.INI file:
+
+              device=[drive:][\path\]ATP870U.386
+              device=[drive:][\path\]TopInt13.386
+
+        The [drive:] and [\path\] point to the directory that contains
+        TopInt13.386 file. Note that the setting must specify the full 
+        path of the device drivers.
+
+
+

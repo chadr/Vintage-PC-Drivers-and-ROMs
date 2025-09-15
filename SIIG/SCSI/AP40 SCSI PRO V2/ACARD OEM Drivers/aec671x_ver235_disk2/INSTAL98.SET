@@ -1,0 +1,66 @@
+#Title
+    " ACARD ASPI …I…i…$…P …$…s…9…H…k …f…G…#…j…G…#< Ver 1.00 "
+#Company
+    "ACARD Technology Corp."
+#ProductName
+    " ACARD AEC671X SCSI …I…i…$…P "
+#Copyright
+    " Copyright (c) 1997 ACARD Technology Corp. "
+#TargetDir
+    "C:\AEC671X"
+#CopyFiles
+    INSTALL.EXE
+    INSTAL98.SET
+    DOS\ASPI671X.SYS
+    DOS\ASPICD.SYS
+    DOS\ASPIUDD.SYS
+    DOS\ASPITLDS.EXE
+    DOS\SETUP98.BAT
+    DOS\ASPITL98.BAT
+    WINDOWS\WINASPI.DLL
+#end
+#Title
+    " ACARD ASPI …I…i…$…P …;…C…H…"…C…W …f…G…#…j…G…#< Ver 1.00 "
+#Company
+    "ACARD Technology Corp."
+#ItemNum
+    10
+#Items
+        0 0
+        "••••• DOS Config Status •••••"
+        none
+        1 1
+        " [ ] Config DOS ASPI ÄÞ×²ÊÞ  "
+        ASPI671X.SYS
+        2 1
+        " [ ] Config CD-ROM ÄÞ×²ÊÞ    "
+        ASPICD.SYS
+        3 1
+        " [ ] Config MO/HDD           "
+        ASPIUDD.SYS
+        4 1
+        " [ ] Copy DOS Files          "
+        none
+        0 0
+        "••• Windows Config Status •••"
+        none
+        5 1
+        " [ ] Install Win31 Files     "
+        WINASPI.DLL
+        0 0
+        "•••••••••••••••••••••••••••••"
+        none
+        -1 0
+        " ¢3™T                        "
+        none
+        -2 0
+        " –/ )*®;                    "
+        none
+#ConfigDelFiles
+        ASPI671X.SYS
+        ASPI6710.SYS
+        ASPIUDD.SYS
+        ASPICD.SYS
+#end
+#EOF  
+­

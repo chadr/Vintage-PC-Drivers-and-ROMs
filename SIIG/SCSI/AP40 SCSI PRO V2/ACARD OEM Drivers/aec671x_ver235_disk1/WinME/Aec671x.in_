@@ -1,0 +1,125 @@
+[Version]
+signature="$CHICAGO$"
+Provider=%Acard%
+Class=SCSIAdapter
+LayoutFile=LAYOUT.INF
+;CatalogFile=atp870.cat
+
+[ClassInstall]
+Addreg=SCSIReg
+
+[SCSIReg]
+HKR,,,,%SCSIClassName%
+HKR,,EnumPropPages,,"a870prop.dll,EnumPropPages"
+HKR,,Icon,,-10
+
+[Manufacturer]
+%ATP%=ATPSCSI
+
+[ATPSCSI]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	Win95
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+%AEC6710.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8002
+%AEC6712UW.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8010
+%AEC6712U.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8020
+%AEC6712S.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8030
+%AEC6712D.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8040
+%AEC6715UW.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8050
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	Win98
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+%AEC6710S_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8002&SUBSYS_80021191&REV_02
+%AEC6710D_B_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8040&SUBSYS_80401191&REV_00
+%AEC6710D_C_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8040&SUBSYS_80401191&REV_01
+%AEC6710U_UW_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8002&SUBSYS_80021191&REV_03
+%AEC6712S_B_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8030&SUBSYS_80301191&REV_00
+%AEC6712S_C_01_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8030&SUBSYS_80301191&REV_01
+%AEC6712S_C_02_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8030&SUBSYS_80301191&REV_02
+%AEC6712S_C_08_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8030&SUBSYS_80301191&REV_08  ; TS
+%AEC6712U_B_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8020&SUBSYS_80201191&REV_00
+%AEC6712U_C_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8020&SUBSYS_80201191&REV_01     ; Maybe 00
+%AEC6712U_C_08_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8020&SUBSYS_80201191&REV_08  ; TU
+%AEC6712UW_B_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8010&SUBSYS_80101191&REV_00
+%AEC6712UW_B_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8010&SUBSYS_80100000&REV_00
+%AEC6712UW_C_98.DeviceDesc%=AEC671X,PCI\VEN_1191&DEV_8010&SUBSYS_80101191&REV_01    ; Maybe 00
+
+[SourceDisksFiles]
+;atp870.cat
+
+[AEC671X.HW]
+AddReg=AdapterSettings
+
+[AdapterSettings]
+HKR,,AdapterSettings,0,"/MD/L07172737475767778797a7b7c7d7e7f7/Wffff/Uffff/Sffff"
+
+[AEC671X]
+;CopyFiles=MPDCopyFile,DLLCopyFile
+CopyFiles=aec671x.mpd,a870prop.dll
+AddReg=IOS,ADDREG_671X
+UpdateInis=ATP870safe
+UpdateCfgSys=DelConfig
+;Reboot
+
+[DelConfig]
+DevDelete=aspicd.sys
+DevDelete=aspi6710.sys
+DevDelete=aspi671x.sys
+DevDelete=aspiudd.sys
+
+[ATP870safe]
+%10%\ios.ini,safelist,,"mbrint13.sys"
+%10%\ios.ini,safelist,,"aspi671x.sys"
+%10%\ios.ini,safelist,,"aspi6710.sys"
+%10%\ios.ini,safelist,,"aspicd.sys"
+%10%\ios.ini,safelist,,"aspiudd.sys"
+
+[ADDREG_671X]
+HKR,,PortDriver,,AEC671X.MPD
+HKR,,EnumPropPages,0,"A870Prop.dll,EnumPropPages"
+
+[IOS]
+HKR,,DevLoader,,*IOS
+HKR,,DontLoadIfConflict,,"Y"
+
+[ControlFlags]
+CopyFilesOnly=PCI\VEN_1191&DEV_8002
+CopyFilesOnly=PCI\VEN_1191&DEV_8010
+CopyFilesOnly=PCI\VEN_1191&DEV_8020
+CopyFilesOnly=PCI\VEN_1191&DEV_8030
+CopyFilesOnly=PCI\VEN_1191&DEV_8040
+CopyFilesOnly=PCI\VEN_1191&DEV_8050
+
+[Strings]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	Common
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Acard=""
+ATP="Acard"
+ID1="AEC-671XU/W/S/D/SUW Windows 95 Installation disk"
+SCSIClassName="SCSI controllers"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	Win95
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+AEC6710.DeviceDesc="ACARD AEC6710U/UW/S/D PCI SCSI Adapter"
+AEC6712UW.DeviceDesc="ACARD AEC6712UW PCI Ultra/W SCSI Adapter"
+AEC6712U.DeviceDesc="ACARD AEC6712U/TU PCI SCSI Adapter"
+AEC6712S.DeviceDesc="ACARD AEC6710S/6712S/TS PCI SCSI Adapter"
+AEC6712D.DeviceDesc="ACARD AEC6710D PCI SCSI Adapter"
+AEC6715UW.DeviceDesc="ACARD AEC6715UW PCI Ultra/W SCSI Adapter"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;	Win98
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+AEC6710S_98.DeviceDesc="ACARD AEC6710S PCI SCSI Adapter"
+AEC6710D_B_98.DeviceDesc="ACARD AEC6710D PCI SCSI Adapter"
+AEC6710D_C_98.DeviceDesc="ACARD AEC6710D PCI SCSI Adapter"
+AEC6710U_UW_98.DeviceDesc="ACARD AEC6710U/UW PCI SCSI Adapter"
+AEC6712S_B_98.DeviceDesc="ACARD AEC6710S/6712S/TS PCI SCSI Adapter"
+AEC6712S_C_01_98.DeviceDesc="ACARD AEC6710S/6712S/TS PCI SCSI Adapter"
+AEC6712S_C_02_98.DeviceDesc="ACARD AEC6710S/6712S/TS PCI SCSI Adapter"
+AEC6712S_C_08_98.DeviceDesc="ACARD AEC6710S/6712S/TS PCI SCSI Adapter"
+AEC6712U_B_98.DeviceDesc="ACARD AEC6712U/TU PCI Ultra SCSI-3 Adapter"
+AEC6712U_C_98.DeviceDesc="ACARD AEC6712U/TU PCI Ultra SCSI-3 Adapter"
+AEC6712U_C_08_98.DeviceDesc="ACARD AEC6712U/TU PCI Ultra SCSI-3 Adapter"
+AEC6712UW_B_98.DeviceDesc="ACARD AEC6712UW PCI Ultra/W SCSI Adapter"
+AEC6712UW_C_98.DeviceDesc="ACARD AEC6712UW PCI Ultra/W SCSI Adapter"

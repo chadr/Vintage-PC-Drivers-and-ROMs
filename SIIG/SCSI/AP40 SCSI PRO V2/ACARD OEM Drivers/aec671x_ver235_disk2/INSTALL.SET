@@ -1,0 +1,63 @@
+#Title
+    " ACARD ASPI Driver Installation Utility Ver 1.00 "
+#Company
+    "ACARD Technology Corp."
+#ProductName
+    " ACARD AEC671X SCSI Driver "
+#Copyright
+    " Copyright (c) 1999 ACARD Technology Corp. "
+#TargetDir
+    "C:\AEC671X"
+#CopyFiles
+    INSTALL.EXE
+    INSTALL.SET
+    DOS\ASPI671X.SYS
+    DOS\ASPICD.SYS
+    DOS\ASPIUDD.SYS
+    DOS\ASPITLDS.EXE 
+    WINDOWS\WINASPI.DLL
+#end
+#Title
+    " ACARD ASPI Driver Setup Utility Ver 1.00 "
+#Company
+    "ACARD Technology Corp."
+#ItemNum
+    10
+#Items
+        0 0
+        "ÄÄÄÄÄ DOS Config Status ÄÄÄÄÄ"
+        none
+        1 1
+        " [ ] Copy DOS ASPI Driver    "
+        ASPI671X.SYS
+        2 1
+        " [ ] Copy CD-ROM Driver      "
+        ASPICD.SYS
+        3 1
+        " [ ] Copy MO/HDD Driver      "
+        ASPIUDD.SYS
+        4 1
+        " [ ] Modify configurations   "
+        none
+        0 0
+        "ÄÄÄ Windows Config Status ÄÄÄ"
+        none
+        5 1
+        " [ ] Install Win31 Files     "
+        WINASPI.DLL
+        0 0
+        "ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ"
+        none
+        -1 0
+        " Continue                    "
+        none
+        -2 0
+        " Abort                       "
+        none
+#ConfigDelFiles
+        ASPI671X.SYS
+        ASPIUDD.SYS
+        ASPICD.SYS
+#end
+#EOF
+b

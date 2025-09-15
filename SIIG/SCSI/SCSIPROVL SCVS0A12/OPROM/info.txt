@@ -1,0 +1,10 @@
+XL-521/525 "Eureka" VL-Bus SCSI Host Adapter (c) Copyright 1993-94, Xirlink Inc., Version 1.0.2 All Rights Reserved.
+SIIG SCSI-Pro VL Fast SCSI II BIOS Version 2.1.0
+Copyright (c) 1993-1995,  All Rights Reserved.
+ID7 : SCSI-Pro VL Fast SCSI II Host Adapter
+SIIG SCSI-Pro VL Low Level Formatting Utility (1.0)
+
+MD5, SHA1, SHA256:
+8da8d7d3345eed1786f278e61aeb72b3  SCSIPROVL_AM27C512@DIP28.BIN
+7b306c2d92f5b2ed7157550b8e78ca7af6567a4a  SCSIPROVL_AM27C512@DIP28.BIN
+0c27028b9076ac630bd3614afbad3447e6703f01153c5685c6480884d8c72071  SCSIPROVL_AM27C512@DIP28.BIN

@@ -1,0 +1,68 @@
+[Disks]
+
+d1 = "ACARD AEC671X SCSI WINDOWS NT MINIPORT DRIVERS",winnt\aec671x.sys,winnt
+d2 = "ACARD AEC671X SCSI WINDOWS 2000 MINIPORT DRIVERS",win2000\aec671x.sys,win2000
+d3 = "ACARD AEC671X SCSI WINDOWS XP MINIPORT DRIVERS",winxp\aec671x.sys,winxp
+d4 = "ACARD AEC671X SCSI WINDOWS 2003 MINIPORT DRIVERS",win2003\aec671x.sys,win2003
+
+[Defaults]
+SCSI = aec671x_w2k
+
+# <component_name> is one of computer, display, keyboard, mouse,
+#   "keyboard layout", or scsi.
+#
+# <id> is a unique (within the component) string to be associated
+#   with an option.
+#
+# Example:
+#
+#   mouse = xyzmou1
+#
+
+[SCSI]
+
+# Example:
+#
+#   [mouse]
+#   xyzmou1 = "Company XYZ Mouse type 1"
+
+aec671x_nt4 = "ACARD AEC671X PCI Ultra/W SCSI WINDOWS NT4.0 MINIPORT DRIVER"
+aec671x_w2k = "ACARD AEC671X PCI Ultra/W SCSI WINDOWS 2000 MINIPORT DRIVER"
+aec671x_xp = "ACARD AEC671X PCI Ultra/W SCSI WINDOWS XP MINIPORT DRIVER"
+aec671x_2k3 = "ACARD AEC671X PCI Ultra/W SCSI WINDOWS 2003 MINIPORT DRIVER"
+
+# Example:
+#
+#   [Files.mouse.xyzmou1]
+#   port = d1,xyzmou1p.sys,xyzmou1p
+
+[Files.SCSI.aec671x_nt4]
+driver = d1,aec671x.sys,aec671x_nt4
+inf    = d1,aec671x.inf
+
+[Files.SCSI.aec671x_w2k]
+driver = d2,aec671x.sys,aec671x_w2k
+inf    = d2,aec671x.inf
+
+[Files.SCSI.aec671x_xp]
+driver = d3,aec671x.sys,aec671x_xp
+inf    = d3,aec671x.inf
+
+
+[Files.SCSI.aec671x_2k3]
+driver = d4,aec671x.sys,aec671x_2k3
+inf    = d4,aec671x.inf
+
+#   [Config.xyzmou1p]
+#   value = "",MyValue,REG_DWORD,0
+#   value = NewKey,NewValue,REG_SZ,"this is a value"
+
+#value = <key_name>,<value_name>,<value_type>,<value>...
+
+[Config.aec671x_nt4]
+
+[Config.aec671x_w2k]
+
+[Config.aec671x_xp]
+
+[Config.aec671x_2k3]

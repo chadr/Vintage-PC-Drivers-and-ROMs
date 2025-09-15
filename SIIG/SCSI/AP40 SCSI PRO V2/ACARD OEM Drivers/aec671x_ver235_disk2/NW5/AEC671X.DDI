@@ -1,0 +1,124 @@
+;;ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+;;บ File:     AEC671X.DDI						   บ
+;;บ									   บ
+;;บ Purpose:  Description and installation file for AEC671X.HAM.	   บ
+;;บ									   บ
+;;บ Author:   Robert Chen						   บ
+;;บ									   บ
+;;บ Notice:   (C) Copyright 1998-2000 ACARD, Inc.				บ
+;;บ	      All rights reserved.					   บ
+;;บ									   บ
+;;ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+;DrIvEr DeScRiPtIoN
+Version: 2.0
+SyntaxVersion: 1.00
+
+Driver AEC671X
+{
+    Par:		2.00
+
+    File:		AEC671X.HAM
+
+    Description:	$AEC671X_Description
+    Help:		$AEC671X_Help
+
+    Prod:		'PCI.1191.8010.*.*.*',  ; AEC-6712UW
+			'PCI.1191.8020.*.*.*',  ; AEC-6712U
+			'PCI.1191.8030.*.*.*',  ; AEC-6712S
+			'PCI.1191.8040.*.*.*',  ; AEC-6712D
+			'PCI.1191.8050.*.*.*',  ; AEC-6715UW
+			'PCI.1191.8060.*.*.*'   ; AEC-6712T
+
+    ;@# Alias:		'AEC671X.DSK'
+
+    ;@# SProd:		'ACARD~AEC-6712 PCI SCSI3 ULTRA/W ADAPTER',
+    ;@# 		'ACARD~AEC-6712 PCI SCSI3 ULTRA ADAPTER',
+    ;@# 		'ACARD~AEC-6712 PCI SCSI3 ULTRA ADAPTER',
+    ;@# 		'ACARD~AEC-6712 PCI SCSI3 ULTRA ADAPTER',
+    ;@# 		'ACARD~AEC-6715 PCI SCSI3 ULTRA/W ADAPTER',
+    ;@# 		'ACARD~AEC-6712 PCI SCSI3 ULTRA ADAPTER'
+
+    Prompt SLOT OPT
+    {
+    }
+}
+
+DLang:	 4 ; English (American)
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	 6 ; French (France)
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	 7 ; German
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	 8 ; Italian
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	 9 ; Japanese
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	10 ; Korean
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	12 ; Portugese (Brazil)
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	13 ; Russian
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	14 ; Spanish
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	16 ; Chinese (Traditional)
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+Lang:	 1 ; Chinese (Simplified)
+  $AEC671X_Description =
+	 "ACARD AEC-671X SCSI Module"
+  $AEC671X_Help =
+	 "When you load the driver, The interrupt level & io port
+	 will be determined from the PCI configuration."
+
+;DrIvEr DeScRiPtIoN EnD
+
