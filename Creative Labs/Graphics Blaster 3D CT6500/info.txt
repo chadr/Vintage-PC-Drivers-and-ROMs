@@ -1,0 +1,9 @@
+CL-GD546x Laguna PCI VGA BIOS Version 1.45a
+Copyright 1992-1996 Cirrus Logic, Inc. All Rights Reserved.
+Copyright 1987-1990 Quadtel Corp. All Rights Reserved.
+Copyright 1996 Creative Technology Ltd. All Rights Reserved.
+
+MD5, SHA1, SHA256:
+4897e779ae8c296044a3d0321c0fde92  CreativeGraphicsBlaster_CT6500_AM27C256@DIP28.BIN
+0d97cc63d8bd06c45ead2f467398a3cf01478f08  CreativeGraphicsBlaster_CT6500_AM27C256@DIP28.BIN
+61d21e27b4d12ee9176e3d41e5a7fe6e84bbdb90720c5a5f6b589f585a5e0469  CreativeGraphicsBlaster_CT6500_AM27C256@DIP28.BIN
